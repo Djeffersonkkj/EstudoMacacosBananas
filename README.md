@@ -9,9 +9,10 @@ A proposta é simular um pequeno ecossistema com macacos e bananas, aplicando na
 * Polimorfismo
 * Encapsulamento
 * Abstração
+* Interface
 * Manipulação de listas
 * Tratamento de exceções
-* Organização de estrutura de projeto
+
 
 O foco não é criar um sistema comercial, mas sim experimentar, errar, refatorar e evoluir o código conforme o entendimento sobre boas práticas aumenta.
 
