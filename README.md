@@ -1,2 +1,18 @@
-# EstudoMacacosBananas
-Projeto desenvolvido com o objetivo exclusivo de praticar Programação Orientada a Objetos em C#. Simula um pequeno cenário com macacos e bananas para aplicar conceitos como classes, herança, polimorfismo, encapsulamento e organização de código. Serve como laboratório de aprendizado, experimentação e evolução contínua das boas práticas.
+## 🐒 Projeto Macacos & Bananas
+
+Este repositório contém um projeto desenvolvido com o único objetivo de praticar e consolidar conceitos de **Programação Orientada a Objetos (POO)** utilizando C#.
+
+A proposta é simular um pequeno ecossistema com macacos e bananas, aplicando na prática conceitos como:
+
+* Classes e objetos
+* Herança
+* Polimorfismo
+* Encapsulamento
+* Abstração
+* Manipulação de listas
+* Tratamento de exceções
+* Organização de estrutura de projeto
+
+O foco não é criar um sistema comercial, mas sim experimentar, errar, refatorar e evoluir o código conforme o entendimento sobre boas práticas aumenta.
+
+Este projeto faz parte da minha jornada de aprendizado em desenvolvimento e engenharia de software, servindo como laboratório para aplicar teoria na prática.
