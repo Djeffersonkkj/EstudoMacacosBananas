@@ -1,5 +1,4 @@
 using MacacosBanasEstudo.Enums;
-using MacacosBanasEstudo.Models;
 
 class Chimpanze : Macaco
 {

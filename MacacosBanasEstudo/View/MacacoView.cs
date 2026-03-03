@@ -1,3 +1,5 @@
+using MacacosBanasEstudo.Enums;
+
 class MacacoView
 {
     private readonly MainController _mainController;
@@ -33,51 +35,27 @@ class MacacoView
         try
         {
             string nomeMacaco;
+            TipoMacaco especie;
 
             Console.Clear();
             Console.Write("Qual o nome do novo macaco? ");
             nomeMacaco = Console.ReadLine();
 
             Console.Clear();
-            Console.Write(
-                @"
-                        
-                1 | Chimpanzé
-                2 | Gorila
-                3 | Sagui
 
-                Selecione a ESPECIE do macaco: ");
-
-            string opcaoEspecie = Console.ReadLine();
-
-            switch (opcaoEspecie)
+            foreach (var tipo in Enum.GetValues<TipoMacaco>())
             {
-                case "1":
-                    Console.Clear();
-                    _mainController.MacacoServices.CriarChimpanze(nomeMacaco);
-                    Console.WriteLine($"O macaco {nomeMacaco} chegou à floresta!");
-                    break;
-
-                case "2":
-                    Console.Clear();
-                    _mainController.MacacoServices.CriarGorila(nomeMacaco);
-                    Console.WriteLine($"O macaco {nomeMacaco} chegou à floresta!");
-                    break;
-
-                case "3":
-                    Console.Clear();
-                    _mainController.MacacoServices.CriarSagui(nomeMacaco);
-                    Console.WriteLine($"O macaco {nomeMacaco} chegou à floresta!");
-                    break;
-
-                default:
-                    Console.Clear();
-                    Console.WriteLine("Opção inválida!");
-                    break;
+                Console.WriteLine($"{(int)tipo} | {tipo}");
             }
+            Console.Write("Selecione a ESPECIE do macaco: ");
+            int opcao = int.Parse(Console.ReadLine());
+            especie = (TipoMacaco)opcao;
 
-            
+            Console.Clear();
+            System.Console.WriteLine($"Um {especie} nasceu na floresta!");
+            _mainController.MacacoServices.CriarMacaco(nomeMacaco, especie);
         }
+
         catch (System.Exception ex)
         {
             Console.Clear();

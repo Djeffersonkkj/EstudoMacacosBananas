@@ -1,5 +1,7 @@
 
 //GERADO COM GEMINI
+using MacacosBanasEstudo.Enums;
+
 class InicializadorDados
 {
     private readonly MainController _controller;
@@ -31,13 +33,13 @@ class InicializadorDados
         // 3. Criar Macacos (Um de cada tipo para testar as mecânicas específicas)
         
         // Chimpanzé (Pode envenenar bananas - opção 9)
-        _controller.MacacoServices.CriarChimpanze("Cesar"); 
+        _controller.MacacoServices.CriarMacaco("Cesar", TipoMacaco.Chimpanze); 
         
         // Gorila (Pode bater em outros - opção 10)
-        _controller.MacacoServices.CriarGorila("Kong");     
+        _controller.MacacoServices.CriarMacaco("Kong", TipoMacaco.Gorila);     
         
         // Sagui (Pode roubar bolsas - opção 8)
-        _controller.MacacoServices.CriarSagui("Abu");       
+        _controller.MacacoServices.CriarMacaco("Abu", TipoMacaco.Sagui);       
 
         Console.WriteLine("Dados carregados com sucesso!");
         // Pequena pausa para o usuário ver que carregou

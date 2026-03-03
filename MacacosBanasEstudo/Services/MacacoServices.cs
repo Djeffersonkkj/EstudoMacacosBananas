@@ -26,9 +26,10 @@ class MacacoServices
     //     _floresta.AdicionarMacaco(novoGorila);
     // }
 
-    public void CriarMacaco(TipoMacaco tipo)
+    public void CriarMacaco(string nome,TipoMacaco tipo)
     {
-        
+        Macaco novoMacaco = GeradorDeMacaco.CriarMacaco(nome, tipo);
+        _floresta.AdicionarMacaco(novoMacaco);
     }
 
     public IReadOnlyList<Iconsumivel> ObterItens(Macaco macaco)

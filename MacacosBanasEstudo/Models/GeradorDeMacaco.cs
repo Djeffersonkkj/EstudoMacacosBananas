@@ -1,22 +1,30 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 using MacacosBanasEstudo.Enums;
-
-namespace MacacosBanasEstudo.Models;
 
 class GeradorDeMacaco
 {
-    private static readonly Dictionary<TipoMacaco, Func<string, Macaco>> _geradorDeMacacos = new();
+    private static readonly Dictionary<TipoMacaco, Func<string, Macaco>>
+        _geradorDeMacacos = new();
 
-    public static void AdicionarGerador(TipoMacaco tipo, Func<string, Macaco> criar)
+    public static void Inicializar()
+    {
+        RuntimeHelpers.RunClassConstructor(typeof(Chimpanze).TypeHandle);
+        RuntimeHelpers.RunClassConstructor(typeof(Sagui).TypeHandle);
+        RuntimeHelpers.RunClassConstructor(typeof(Gorila).TypeHandle);
+    }
+
+    public static void AdicionarGerador(
+        TipoMacaco tipo,
+        Func<string, Macaco> criar)
     {
         _geradorDeMacacos[tipo] = criar;
     }
 
     public static Macaco CriarMacaco(string nome, TipoMacaco tipo)
     {
-        return _geradorDeMacacos[tipo](nome);
+        if (!_geradorDeMacacos.TryGetValue(tipo, out var gerador))
+            throw new Exception($"Tipo não registrado: {tipo}");
+
+        return gerador(nome);
     }
 }

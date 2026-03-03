@@ -1,4 +1,5 @@
-﻿Floresta floresta = new();
+﻿GeradorDeMacaco.Inicializar();
+Floresta floresta = new();
 IconsumivelServices iconsumivelServices = new(floresta);
 BolsaServices bolsaServices = new(floresta);
 MacacoServices macacoServices = new(floresta);
