@@ -39,7 +39,9 @@ class InicializadorDados
         _controller.MacacoServices.CriarMacaco("Kong", TipoMacaco.Gorila);     
         
         // Sagui (Pode roubar bolsas - opção 8)
-        _controller.MacacoServices.CriarMacaco("Abu", TipoMacaco.Sagui);       
+        _controller.MacacoServices.CriarMacaco("Abu", TipoMacaco.Sagui);    
+
+        _controller.MacacoServices.CriarMacaco("Geremias", TipoMacaco.Bruxo);   
 
         Console.WriteLine("Dados carregados com sucesso!");
         // Pequena pausa para o usuário ver que carregou

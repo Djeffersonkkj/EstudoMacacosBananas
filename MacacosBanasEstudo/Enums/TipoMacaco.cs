@@ -4,6 +4,7 @@ namespace MacacosBanasEstudo.Enums
     {
         Chimpanze = 1,
         Gorila = 2,
-        Sagui = 3
+        Sagui = 3,
+        Bruxo = 4
     }
 }

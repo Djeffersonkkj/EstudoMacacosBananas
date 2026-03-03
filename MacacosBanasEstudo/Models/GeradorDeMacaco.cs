@@ -11,6 +11,7 @@ class GeradorDeMacaco
         RuntimeHelpers.RunClassConstructor(typeof(Chimpanze).TypeHandle);
         RuntimeHelpers.RunClassConstructor(typeof(Sagui).TypeHandle);
         RuntimeHelpers.RunClassConstructor(typeof(Gorila).TypeHandle);
+        RuntimeHelpers.RunClassConstructor(typeof(Bruxo).TypeHandle);
     }
 
     public static void AdicionarGerador(

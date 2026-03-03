@@ -2,7 +2,7 @@ using MacacosBanasEstudo.Enums;
 
 class Sagui : Macaco
 {
-    public Sagui(string nome) : base(nome, 60.0m, 2.0m){}
+    public Sagui(string nome) : base(nome, 60m, 2.0m){}
     public override TipoMacaco tipo => TipoMacaco.Sagui;
 
     static Sagui()

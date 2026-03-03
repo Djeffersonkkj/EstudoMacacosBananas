@@ -160,7 +160,7 @@ class MacacoView
             Console.WriteLine(resultado);
             if (alvo.Energia <= 0)
             {
-                Console.WriteLine(resultado);
+                Console.WriteLine($"O macaco {alvo.Nome} está morto.");
                 _mainController.MacacoServices.MatarMacaco(alvo);
             }
         }

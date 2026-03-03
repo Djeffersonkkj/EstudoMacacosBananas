@@ -8,23 +8,6 @@ class MacacoServices
     {
         _floresta = floresta;
     }
-    // public void CriarChimpanze(string nome)
-    // {
-    //     Chimpanze novoChimpanze = new Chimpanze(nome);
-    //     _floresta.AdicionarMacaco(novoChimpanze);
-    // }
-
-    // public void CriarSagui(string nome)
-    // {
-    //     Sagui novoSagui = new Sagui(nome);
-    //     _floresta.AdicionarMacaco(novoSagui);
-    // }
-
-    // public void CriarGorila(string nome)
-    // {
-    //     Gorila novoGorila = new Gorila(nome);
-    //     _floresta.AdicionarMacaco(novoGorila);
-    // }
 
     public void CriarMacaco(string nome,TipoMacaco tipo)
     {
