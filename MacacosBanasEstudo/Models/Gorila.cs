@@ -1,6 +1,15 @@
+using MacacosBanasEstudo.Enums;
+using MacacosBanasEstudo.Models;
+
 class Gorila : Macaco
 {
     public Gorila(string nome) : base(nome, 200.0m, 0.5m){}
+    public override TipoMacaco tipo => TipoMacaco.Gorila;
+
+    static Gorila()
+    {
+        GeradorDeMacaco.AdicionarGerador(TipoMacaco.Gorila, (nome) => new Gorila(nome));
+    }
 
     public void Bater(Macaco alvo)
     {
