@@ -1,11 +1,13 @@
 using System.ComponentModel;
+using MacacosBanasEstudo.Enums;
 
- abstract class Macaco
+abstract class Macaco
 {
     public string Nome { get; private set; }
     public Bolsa BolsaVestida { get; private set; }
     public decimal Energia { get; protected set; }
     public decimal Agilidade { get; protected set; }
+    public abstract TipoMacaco tipo { get; }
     protected decimal _limiteEnergia;
 
     public Macaco(string nome, decimal limiteEnergia, decimal agilidade)

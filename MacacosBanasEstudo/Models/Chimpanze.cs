@@ -1,6 +1,14 @@
+using MacacosBanasEstudo.Enums;
+
 class Chimpanze : Macaco
 {
-    public Chimpanze(string nome) : base(nome, 100.0m, 1.0m){}
+    public Chimpanze(string nome) : base(nome, 100m, 1.0m){}
+    public override TipoMacaco tipo => TipoMacaco.Chimpanze;
+
+    static Chimpanze()
+    {
+        GeradorDeMacaco.AdicionarGerador(TipoMacaco.Chimpanze, (nome) => new Chimpanze(nome));
+    }
 
     public void EnvenenarComida(Macaco alvo)
     {

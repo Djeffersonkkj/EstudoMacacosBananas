@@ -1,3 +1,5 @@
+using MacacosBanasEstudo.Enums;
+
 class MacacoServices
 {
     private readonly Floresta _floresta;
@@ -6,22 +8,11 @@ class MacacoServices
     {
         _floresta = floresta;
     }
-    public void CriarChimpanze(string nome)
-    {
-        Chimpanze novoChimpanze = new Chimpanze(nome);
-        _floresta.AdicionarMacaco(novoChimpanze);
-    }
 
-    public void CriarSagui(string nome)
+    public void CriarMacaco(string nome,TipoMacaco tipo)
     {
-        Sagui novoSagui = new Sagui(nome);
-        _floresta.AdicionarMacaco(novoSagui);
-    }
-
-    public void CriarGorila(string nome)
-    {
-        Gorila novoGorila = new Gorila(nome);
-        _floresta.AdicionarMacaco(novoGorila);
+        Macaco novoMacaco = GeradorDeMacaco.CriarMacaco(nome, tipo);
+        _floresta.AdicionarMacaco(novoMacaco);
     }
 
     public IReadOnlyList<Iconsumivel> ObterItens(Macaco macaco)
