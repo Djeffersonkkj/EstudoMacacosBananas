@@ -8,18 +8,18 @@ MainController Controller = new(
     iconsumivelServices,
     bolsaServices,
     macacoServices);
-    
+
 InicializadorDados inicializador = new(Controller, floresta);
 inicializador.Semear();
 
 
 MacacoView macacoView = new(Controller);
 BolsaView bolsaView = new(Controller);
-IconsumivelView iconsumivelView = new(Controller); 
+IconsumivelView iconsumivelView = new(Controller);
 MainView mainView = new(
-    Controller, 
-    macacoView, 
-    bolsaView, 
+    Controller,
+    macacoView,
+    bolsaView,
     iconsumivelView);
 
 bool loop = true;
